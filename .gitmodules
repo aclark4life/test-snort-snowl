@@ -1,0 +1,3 @@
+[submodule "libdaq"]
+	path = libdaq
+	url = https://github.com/snort3/libdaq.git
