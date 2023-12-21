@@ -14,3 +14,8 @@ install-gperftools:
 	wget https://github.com/gperftools/gperftools/releases/download/gperftools-2.9.1/gperftools-2.9.1.tar.gz
 	tar xzf gperftools-2.9.1.tar.gz
 	cd gperftools-2.9.1/; ./configure; $(MAKE); $(MAKE) install
+
+install-snort3:
+	wget https://github.com/snort3/snort3/archive/refs/heads/master.zip
+	unzip master.zip
+	cd snort3-master; ./configure_cmake.sh --prefix=/usr/local --enable-tcmalloc
