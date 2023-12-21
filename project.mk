@@ -18,4 +18,4 @@ install-gperftools:
 install-snort3:
 	wget https://github.com/snort3/snort3/archive/refs/heads/master.zip
 	unzip master.zip
-	cd snort3-master; ./configure_cmake.sh --prefix=/usr/local --enable-tcmalloc
+	cd snort3-master; ./configure_cmake.sh --prefix=/usr/local --enable-tcmalloc; cd build; $(MAKE); $(MAKE) install
