@@ -22,6 +22,5 @@ install-snort3:
 	unzip master.zip
 	cd snort3-master; ./configure_cmake.sh --prefix=/usr/local --enable-tcmalloc; cd build; $(MAKE); $(MAKE) install
 
-install-snowl:
-	wget https://snowl.io/download/snowl_1.7.2_amd64.deb
-	dpkg -i snowl_1.7.2_amd64.deb
+test-snort3:
+	snort -c /usr/local/etc/snort/snort.lua
