@@ -8,4 +8,9 @@ install-submodules:
 	git submodule update
 
 install-libdaq:
-	cd libdaq; ./bootstrap; ./configure; $(MAKE); make install
+	cd libdaq; ./bootstrap; ./configure; $(MAKE); $(MAKE) install
+
+install-gperftools:
+	wget https://github.com/gperftools/gperftools/releases/download/gperftools-2.9.1/gperftools-2.9.1.tar.gz
+	tar xzf gperftools-2.9.1.tar.gz
+	cd gperftools-2.9.1/; ./configure; $(MAKE); $(MAKE) install
