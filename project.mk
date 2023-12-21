@@ -6,3 +6,6 @@ install-deps:
 install-submodules:
 	git submodule init
 	git submodule update
+
+install-libdaq:
+	cd libdaq; ./bootstrap; ./configure; $(MAKE); make install
