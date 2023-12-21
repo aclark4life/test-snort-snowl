@@ -24,3 +24,4 @@ install-snort3:
 
 install-snowl:
 	wget https://snowl.io/download/snowl_1.7.2_amd64.deb
+	dpkg -i snowl_1.7.2_amd64.deb
