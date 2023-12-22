@@ -24,3 +24,13 @@ install-snort3:
 
 test-snort3:
 	snort -c /usr/local/etc/snort/snort.lua
+
+define LAUNCHER
+[Desktop Entry]
+Name=Snort3 GUI
+Exec=python3 /home/khcips01admin/Downloads/snortgui/snortguy.py
+Type=Application
+Icon=studio
+endef
+install-launcher:
+	echo $$LAUNCHER > ~/.local/share/applications/snort3.desktop
