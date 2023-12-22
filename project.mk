@@ -32,5 +32,6 @@ Exec=python3 /home/khcips01admin/Downloads/snortgui/snortguy.py
 Type=Application
 Icon=studio
 endef
+export LAUNCHER
 install-launcher:
 	echo $$LAUNCHER > ~/.local/share/applications/snort3.desktop
